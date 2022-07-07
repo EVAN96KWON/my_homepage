@@ -9,6 +9,9 @@ class TabletBody extends StatelessWidget {
       appBar: AppBar(
         title: Text("TABLET"),
       ),
+      body: Column(
+        children: []
+      ),
     );
   }
 }
