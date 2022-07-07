@@ -1,39 +1,40 @@
 import 'package:flutter/material.dart';
 
 class Tile extends StatelessWidget {
-  final int index;
+  final String name;
+  final String description;
 
-  const Tile({
-    Key? key,
-    required this.index
-  }) : super(key: key);
+  const Tile({Key? key, required this.name, required this.description})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-        child: Column(
-            children: [
+    return SizedBox(
+      height: 200,
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 10),
+        child: Card(
+            elevation: 20,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Column(children: [
+              Expanded(
+                  child: Container(
+                      // decoration: BoxDecoration(color: Colors.blue[500]),
+                      child: Center(child: SelectableText(name)))),
+              Expanded(
+                  child: Container(
+                      // decoration: BoxDecoration(color: Colors.blue[400]),
+                      child: Center(child: SelectableText(description)))),
               Expanded(
                   flex: 3,
                   child: Container(
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children:[
-                            SelectableText('$index번째 카드')
-                          ]
-                      )
-                  )
-              ),
-              Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(color: Colors.blue[900]),
-                      child: Center(
-                          child: SelectableText('$index번째 카드입니다')
-                      )
-                  )
-              )
-            ]
-        )
+                          children: [SelectableText(name)]))),
+            ])),
+      ),
     );
   }
 }

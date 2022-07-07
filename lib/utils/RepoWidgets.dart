@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:my_homepage/utils/Tile.dart';
 import 'Repos.dart';
 
 Future<List<Repos>> fetchRepos() async {
@@ -38,21 +39,14 @@ class _ReposListWidgetState extends State<ReposListWidget> {
         future: futureRepos,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Column(
+            return ListView(
+              padding: const EdgeInsets.all(16),
               children: <Widget>[
-                ...snapshot.data!.map((e) => SizedBox(
-                      width: double.infinity,
-                      child: Card(
-                        elevation: 4,
-                        child: Column(
-                          children: [
-                            Text(e.name!),
-                            Text(e.description!),
-                            Text(e.topics!.toString())
-                          ],
-                        ),
-                      ),
+                ...snapshot.data!.map((e) => Tile(
+                      name: e.name!,
+                      description: e.description!,
                     )),
+
               ],
             );
           } else if (snapshot.hasError) {
