@@ -1,60 +1,60 @@
 /// id : 392230079
 /// node_id : "MDEwOlJlcG9zaXRvcnkzOTIyMzAwNzk="
 /// name : "Coding_Tests"
-/// full_name : "EVAN96KWON/Coding_Tests"
+/// full_name : "kwon-evan/Coding_Tests"
 /// private : false
-/// owner : {"login":"EVAN96KWON","id":87924725,"node_id":"MDQ6VXNlcjg3OTI0NzI1","avatar_url":"https://avatars.githubusercontent.com/u/87924725?v=4","gravatar_id":"","url":"https://api.github.com/users/EVAN96KWON","html_url":"https://github.com/EVAN96KWON","followers_url":"https://api.github.com/users/EVAN96KWON/followers","following_url":"https://api.github.com/users/EVAN96KWON/following{/other_user}","gists_url":"https://api.github.com/users/EVAN96KWON/gists{/gist_id}","starred_url":"https://api.github.com/users/EVAN96KWON/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/EVAN96KWON/subscriptions","organizations_url":"https://api.github.com/users/EVAN96KWON/orgs","repos_url":"https://api.github.com/users/EVAN96KWON/repos","events_url":"https://api.github.com/users/EVAN96KWON/events{/privacy}","received_events_url":"https://api.github.com/users/EVAN96KWON/received_events","type":"User","site_admin":false}
-/// html_url : "https://github.com/EVAN96KWON/Coding_Tests"
+/// owner : {"login":"kwon-evan","id":87924725,"node_id":"MDQ6VXNlcjg3OTI0NzI1","avatar_url":"https://avatars.githubusercontent.com/u/87924725?v=4","gravatar_id":"","url":"https://api.github.com/users/kwon-evan","html_url":"https://github.com/kwon-evan","followers_url":"https://api.github.com/users/kwon-evan/followers","following_url":"https://api.github.com/users/kwon-evan/following{/other_user}","gists_url":"https://api.github.com/users/kwon-evan/gists{/gist_id}","starred_url":"https://api.github.com/users/kwon-evan/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/kwon-evan/subscriptions","organizations_url":"https://api.github.com/users/kwon-evan/orgs","repos_url":"https://api.github.com/users/kwon-evan/repos","events_url":"https://api.github.com/users/kwon-evan/events{/privacy}","received_events_url":"https://api.github.com/users/kwon-evan/received_events","type":"User","site_admin":false}
+/// html_url : "https://github.com/kwon-evan/Coding_Tests"
 /// description : "Coding Tests I solved"
 /// fork : false
-/// url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests"
-/// forks_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/forks"
-/// keys_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/keys{/key_id}"
-/// collaborators_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/collaborators{/collaborator}"
-/// teams_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/teams"
-/// hooks_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/hooks"
-/// issue_events_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/issues/events{/number}"
-/// events_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/events"
-/// assignees_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/assignees{/user}"
-/// branches_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/branches{/branch}"
-/// tags_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/tags"
-/// blobs_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/git/blobs{/sha}"
-/// git_tags_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/git/tags{/sha}"
-/// git_refs_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/git/refs{/sha}"
-/// trees_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/git/trees{/sha}"
-/// statuses_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/statuses/{sha}"
-/// languages_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/languages"
-/// stargazers_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/stargazers"
-/// contributors_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/contributors"
-/// subscribers_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/subscribers"
-/// subscription_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/subscription"
-/// commits_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/commits{/sha}"
-/// git_commits_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/git/commits{/sha}"
-/// comments_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/comments{/number}"
-/// issue_comment_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/issues/comments{/number}"
-/// contents_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/contents/{+path}"
-/// compare_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/compare/{base}...{head}"
-/// merges_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/merges"
-/// archive_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/{archive_format}{/ref}"
-/// downloads_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/downloads"
-/// issues_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/issues{/number}"
-/// pulls_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/pulls{/number}"
-/// milestones_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/milestones{/number}"
-/// notifications_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/notifications{?since,all,participating}"
-/// labels_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/labels{/name}"
-/// releases_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/releases{/id}"
-/// deployments_url : "https://api.github.com/repos/EVAN96KWON/Coding_Tests/deployments"
+/// url : "https://api.github.com/repos/kwon-evan/Coding_Tests"
+/// forks_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/forks"
+/// keys_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/keys{/key_id}"
+/// collaborators_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/collaborators{/collaborator}"
+/// teams_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/teams"
+/// hooks_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/hooks"
+/// issue_events_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/issues/events{/number}"
+/// events_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/events"
+/// assignees_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/assignees{/user}"
+/// branches_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/branches{/branch}"
+/// tags_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/tags"
+/// blobs_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/git/blobs{/sha}"
+/// git_tags_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/git/tags{/sha}"
+/// git_refs_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/git/refs{/sha}"
+/// trees_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/git/trees{/sha}"
+/// statuses_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/statuses/{sha}"
+/// languages_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/languages"
+/// stargazers_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/stargazers"
+/// contributors_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/contributors"
+/// subscribers_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/subscribers"
+/// subscription_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/subscription"
+/// commits_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/commits{/sha}"
+/// git_commits_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/git/commits{/sha}"
+/// comments_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/comments{/number}"
+/// issue_comment_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/issues/comments{/number}"
+/// contents_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/contents/{+path}"
+/// compare_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/compare/{base}...{head}"
+/// merges_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/merges"
+/// archive_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/{archive_format}{/ref}"
+/// downloads_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/downloads"
+/// issues_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/issues{/number}"
+/// pulls_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/pulls{/number}"
+/// milestones_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/milestones{/number}"
+/// notifications_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/notifications{?since,all,participating}"
+/// labels_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/labels{/name}"
+/// releases_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/releases{/id}"
+/// deployments_url : "https://api.github.com/repos/kwon-evan/Coding_Tests/deployments"
 /// created_at : "2021-08-03T07:30:19Z"
-/// updated_at : "2022-07-06T02:37:37Z"
+/// updated_at : "2022-07-07T04:16:02Z"
 /// pushed_at : "2022-07-04T08:24:10Z"
-/// git_url : "git://github.com/EVAN96KWON/Coding_Tests.git"
-/// ssh_url : "git@github.com:EVAN96KWON/Coding_Tests.git"
-/// clone_url : "https://github.com/EVAN96KWON/Coding_Tests.git"
-/// svn_url : "https://github.com/EVAN96KWON/Coding_Tests"
+/// git_url : "git://github.com/kwon-evan/Coding_Tests.git"
+/// ssh_url : "git@github.com:kwon-evan/Coding_Tests.git"
+/// clone_url : "https://github.com/kwon-evan/Coding_Tests.git"
+/// svn_url : "https://github.com/kwon-evan/Coding_Tests"
 /// homepage : null
 /// size : 2894
-/// stargazers_count : 1
-/// watchers_count : 1
+/// stargazers_count : 0
+/// watchers_count : 0
 /// language : "Python"
 /// has_issues : true
 /// has_projects : true
@@ -74,7 +74,7 @@
 /// visibility : "public"
 /// forks : 0
 /// open_issues : 0
-/// watchers : 1
+/// watchers : 0
 /// default_branch : "main"
 
 class Repos {
@@ -313,7 +313,7 @@ class Repos {
     if (json['topics'] != null) {
       _topics = [];
       json['topics'].forEach((v) {
-        _topics?.add(Topic.fromJson(v));
+        _topics?.add(v.toString());
       });
     }
     _visibility = json['visibility'];
@@ -725,22 +725,22 @@ Repos copyWith({  int? id,
 
 }
 
-/// login : "EVAN96KWON"
+/// login : "kwon-evan"
 /// id : 87924725
 /// node_id : "MDQ6VXNlcjg3OTI0NzI1"
 /// avatar_url : "https://avatars.githubusercontent.com/u/87924725?v=4"
 /// gravatar_id : ""
-/// url : "https://api.github.com/users/EVAN96KWON"
-/// html_url : "https://github.com/EVAN96KWON"
-/// followers_url : "https://api.github.com/users/EVAN96KWON/followers"
-/// following_url : "https://api.github.com/users/EVAN96KWON/following{/other_user}"
-/// gists_url : "https://api.github.com/users/EVAN96KWON/gists{/gist_id}"
-/// starred_url : "https://api.github.com/users/EVAN96KWON/starred{/owner}{/repo}"
-/// subscriptions_url : "https://api.github.com/users/EVAN96KWON/subscriptions"
-/// organizations_url : "https://api.github.com/users/EVAN96KWON/orgs"
-/// repos_url : "https://api.github.com/users/EVAN96KWON/repos"
-/// events_url : "https://api.github.com/users/EVAN96KWON/events{/privacy}"
-/// received_events_url : "https://api.github.com/users/EVAN96KWON/received_events"
+/// url : "https://api.github.com/users/kwon-evan"
+/// html_url : "https://github.com/kwon-evan"
+/// followers_url : "https://api.github.com/users/kwon-evan/followers"
+/// following_url : "https://api.github.com/users/kwon-evan/following{/other_user}"
+/// gists_url : "https://api.github.com/users/kwon-evan/gists{/gist_id}"
+/// starred_url : "https://api.github.com/users/kwon-evan/starred{/owner}{/repo}"
+/// subscriptions_url : "https://api.github.com/users/kwon-evan/subscriptions"
+/// organizations_url : "https://api.github.com/users/kwon-evan/orgs"
+/// repos_url : "https://api.github.com/users/kwon-evan/repos"
+/// events_url : "https://api.github.com/users/kwon-evan/events{/privacy}"
+/// received_events_url : "https://api.github.com/users/kwon-evan/received_events"
 /// type : "User"
 /// site_admin : false
 
@@ -901,17 +901,4 @@ Owner copyWith({  String? login,
     return map;
   }
 
-}
-
-class Topic {
-  Topic(){}
-
-  Topic.fromJson(dynamic json) {}
-
-  Topic copyWith() => Topic();
-
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    return map;
-  }
 }
