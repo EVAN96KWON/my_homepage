@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/RepoWidgets.dart';
+
 class MobileBody extends StatelessWidget {
   const MobileBody({Key? key}) : super(key: key);
 
@@ -9,6 +11,7 @@ class MobileBody extends StatelessWidget {
       appBar: AppBar(
         title: Text("MOBILE"),
       ),
+      body: ReposListWidget(),
     );
   }
 }

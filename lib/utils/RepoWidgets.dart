@@ -42,11 +42,7 @@ class _ReposListWidgetState extends State<ReposListWidget> {
             return ListView(
               padding: const EdgeInsets.all(16),
               children: <Widget>[
-                ...snapshot.data!.map((e) => Tile(
-                      name: e.name!,
-                      description: e.description!,
-                    )),
-
+                ...snapshot.data!.map((e) => Tile.fromRepos(e)),
               ],
             );
           } else if (snapshot.hasError) {

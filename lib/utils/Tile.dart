@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'Repos.dart';
+import 'package:recase/recase.dart';
 
 class Tile extends StatelessWidget {
-  final String name;
-  final String description;
+  late final Repos repos;
 
-  const Tile({Key? key, required this.name, required this.description})
-      : super(key: key);
+  Tile({Key? key}) : super(key: key);
+
+  Tile.fromRepos(this.repos);
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +24,22 @@ class Tile extends StatelessWidget {
             child: Column(children: [
               Expanded(
                   child: Container(
-                      // decoration: BoxDecoration(color: Colors.blue[500]),
-                      child: Center(child: SelectableText(name)))),
+                      decoration: BoxDecoration(color: Colors.blue[500]),
+                      child: Center(child: SelectableText(ReCase(repos.name!).titleCase)))),
               Expanded(
                   child: Container(
                       // decoration: BoxDecoration(color: Colors.blue[400]),
-                      child: Center(child: SelectableText(description)))),
+                      child:
+                          Center(child: SelectableText(repos.description!)))),
               Expanded(
                   flex: 3,
                   child: Container(
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [SelectableText(name)]))),
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      ...repos.topics!.map((t) => Text(t)),
+                    ],
+                  ))),
             ])),
       ),
     );
