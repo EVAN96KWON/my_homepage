@@ -10,37 +10,46 @@ class Tile extends StatelessWidget {
 
   Tile.fromRepos(this.repos);
 
+  String getImageName(Repos repos) {
+    if (repos.topics!.contains('study')) {
+      return 'assets/images/icon_books.png';
+    } else if (repos.topics!.contains('project')) {
+      return 'assets/images/icon_rocket.png';
+    } else if (repos.topics!.contains('contest')) {
+      return 'assets/images/icon_trophy.png';
+    } else {
+      return 'assets/images/icon_hello.png';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 200,
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
-        child: Card(
-            elevation: 20,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10),
+      child: Card(
+        elevation: 15,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Column(
+          children: [
+            ListTile(
+              leading: Image(
+                image: AssetImage(getImageName(repos)),
+                fit: BoxFit.fitHeight,
+              ),
+              title: Text(ReCase(repos.name!).titleCase,
+                  style: TextStyle(fontSize: 32)),
+              subtitle: Text(
+                repos.description!,
+                style: TextStyle(color: Colors.black.withOpacity(0.6)),
+              ),
             ),
-            child: Column(children: [
-              Expanded(
-                  child: Container(
-                      decoration: BoxDecoration(color: Colors.blue[500]),
-                      child: Center(child: SelectableText(ReCase(repos.name!).titleCase)))),
-              Expanded(
-                  child: Container(
-                      // decoration: BoxDecoration(color: Colors.blue[400]),
-                      child:
-                          Center(child: SelectableText(repos.description!)))),
-              Expanded(
-                  flex: 3,
-                  child: Container(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      ...repos.topics!.map((t) => Text(t)),
-                    ],
-                  ))),
-            ])),
+          ],
+        ),
       ),
     );
   }
