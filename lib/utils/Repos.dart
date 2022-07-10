@@ -1,3 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:recase/recase.dart';
+import 'package:intl/intl.dart';
+
 /// id : 392230079
 /// node_id : "MDEwOlJlcG9zaXRvcnkzOTIyMzAwNzk="
 /// name : "Coding_Tests"
@@ -79,84 +84,85 @@
 
 class Repos {
   Repos({
-      int? id, 
-      String? nodeId, 
-      String? name, 
-      String? fullName, 
-      bool? private, 
-      Owner? owner, 
-      String? htmlUrl, 
-      String? description, 
-      bool? fork, 
-      String? url, 
-      String? forksUrl, 
-      String? keysUrl, 
-      String? collaboratorsUrl, 
-      String? teamsUrl, 
-      String? hooksUrl, 
-      String? issueEventsUrl, 
-      String? eventsUrl, 
-      String? assigneesUrl, 
-      String? branchesUrl, 
-      String? tagsUrl, 
-      String? blobsUrl, 
-      String? gitTagsUrl, 
-      String? gitRefsUrl, 
-      String? treesUrl, 
-      String? statusesUrl, 
-      String? languagesUrl, 
-      String? stargazersUrl, 
-      String? contributorsUrl, 
-      String? subscribersUrl, 
-      String? subscriptionUrl, 
-      String? commitsUrl, 
-      String? gitCommitsUrl, 
-      String? commentsUrl, 
-      String? issueCommentUrl, 
-      String? contentsUrl, 
-      String? compareUrl, 
-      String? mergesUrl, 
-      String? archiveUrl, 
-      String? downloadsUrl, 
-      String? issuesUrl, 
-      String? pullsUrl, 
-      String? milestonesUrl, 
-      String? notificationsUrl, 
-      String? labelsUrl, 
-      String? releasesUrl, 
-      String? deploymentsUrl, 
-      String? createdAt, 
-      String? updatedAt, 
-      String? pushedAt, 
-      String? gitUrl, 
-      String? sshUrl, 
-      String? cloneUrl, 
-      String? svnUrl, 
-      dynamic homepage, 
-      int? size, 
-      int? stargazersCount, 
-      int? watchersCount, 
-      String? language, 
-      bool? hasIssues, 
-      bool? hasProjects, 
-      bool? hasDownloads, 
-      bool? hasWiki, 
-      bool? hasPages, 
-      int? forksCount, 
-      dynamic mirrorUrl, 
-      bool? archived, 
-      bool? disabled, 
-      int? openIssuesCount, 
-      dynamic license, 
-      bool? allowForking, 
-      bool? isTemplate, 
-      bool? webCommitSignoffRequired, 
-      List<dynamic>? topics, 
-      String? visibility, 
-      int? forks, 
-      int? openIssues, 
-      int? watchers, 
-      String? defaultBranch,}){
+    int? id,
+    String? nodeId,
+    String? name,
+    String? fullName,
+    bool? private,
+    Owner? owner,
+    String? htmlUrl,
+    String? description,
+    bool? fork,
+    String? url,
+    String? forksUrl,
+    String? keysUrl,
+    String? collaboratorsUrl,
+    String? teamsUrl,
+    String? hooksUrl,
+    String? issueEventsUrl,
+    String? eventsUrl,
+    String? assigneesUrl,
+    String? branchesUrl,
+    String? tagsUrl,
+    String? blobsUrl,
+    String? gitTagsUrl,
+    String? gitRefsUrl,
+    String? treesUrl,
+    String? statusesUrl,
+    String? languagesUrl,
+    String? stargazersUrl,
+    String? contributorsUrl,
+    String? subscribersUrl,
+    String? subscriptionUrl,
+    String? commitsUrl,
+    String? gitCommitsUrl,
+    String? commentsUrl,
+    String? issueCommentUrl,
+    String? contentsUrl,
+    String? compareUrl,
+    String? mergesUrl,
+    String? archiveUrl,
+    String? downloadsUrl,
+    String? issuesUrl,
+    String? pullsUrl,
+    String? milestonesUrl,
+    String? notificationsUrl,
+    String? labelsUrl,
+    String? releasesUrl,
+    String? deploymentsUrl,
+    String? createdAt,
+    String? updatedAt,
+    String? pushedAt,
+    String? gitUrl,
+    String? sshUrl,
+    String? cloneUrl,
+    String? svnUrl,
+    dynamic homepage,
+    int? size,
+    int? stargazersCount,
+    int? watchersCount,
+    String? language,
+    bool? hasIssues,
+    bool? hasProjects,
+    bool? hasDownloads,
+    bool? hasWiki,
+    bool? hasPages,
+    int? forksCount,
+    dynamic mirrorUrl,
+    bool? archived,
+    bool? disabled,
+    int? openIssuesCount,
+    dynamic license,
+    bool? allowForking,
+    bool? isTemplate,
+    bool? webCommitSignoffRequired,
+    List<dynamic>? topics,
+    String? visibility,
+    int? forks,
+    int? openIssues,
+    int? watchers,
+    String? defaultBranch,
+  }) {
     _id = id;
     _nodeId = nodeId;
     _name = name;
@@ -235,7 +241,7 @@ class Repos {
     _openIssues = openIssues;
     _watchers = watchers;
     _defaultBranch = defaultBranch;
-}
+  }
 
   Repos.fromJson(dynamic json) {
     _id = json['id'];
@@ -322,6 +328,7 @@ class Repos {
     _watchers = json['watchers'];
     _defaultBranch = json['default_branch'];
   }
+
   int? _id;
   String? _nodeId;
   String? _name;
@@ -400,240 +407,323 @@ class Repos {
   int? _openIssues;
   int? _watchers;
   String? _defaultBranch;
-Repos copyWith({  int? id,
-  String? nodeId,
-  String? name,
-  String? fullName,
-  bool? private,
-  Owner? owner,
-  String? htmlUrl,
-  String? description,
-  bool? fork,
-  String? url,
-  String? forksUrl,
-  String? keysUrl,
-  String? collaboratorsUrl,
-  String? teamsUrl,
-  String? hooksUrl,
-  String? issueEventsUrl,
-  String? eventsUrl,
-  String? assigneesUrl,
-  String? branchesUrl,
-  String? tagsUrl,
-  String? blobsUrl,
-  String? gitTagsUrl,
-  String? gitRefsUrl,
-  String? treesUrl,
-  String? statusesUrl,
-  String? languagesUrl,
-  String? stargazersUrl,
-  String? contributorsUrl,
-  String? subscribersUrl,
-  String? subscriptionUrl,
-  String? commitsUrl,
-  String? gitCommitsUrl,
-  String? commentsUrl,
-  String? issueCommentUrl,
-  String? contentsUrl,
-  String? compareUrl,
-  String? mergesUrl,
-  String? archiveUrl,
-  String? downloadsUrl,
-  String? issuesUrl,
-  String? pullsUrl,
-  String? milestonesUrl,
-  String? notificationsUrl,
-  String? labelsUrl,
-  String? releasesUrl,
-  String? deploymentsUrl,
-  String? createdAt,
-  String? updatedAt,
-  String? pushedAt,
-  String? gitUrl,
-  String? sshUrl,
-  String? cloneUrl,
-  String? svnUrl,
-  dynamic homepage,
-  int? size,
-  int? stargazersCount,
-  int? watchersCount,
-  String? language,
-  bool? hasIssues,
-  bool? hasProjects,
-  bool? hasDownloads,
-  bool? hasWiki,
-  bool? hasPages,
-  int? forksCount,
-  dynamic mirrorUrl,
-  bool? archived,
-  bool? disabled,
-  int? openIssuesCount,
-  dynamic license,
-  bool? allowForking,
-  bool? isTemplate,
-  bool? webCommitSignoffRequired,
-  List<dynamic>? topics,
-  String? visibility,
-  int? forks,
-  int? openIssues,
-  int? watchers,
-  String? defaultBranch,
-}) => Repos(  id: id ?? _id,
-  nodeId: nodeId ?? _nodeId,
-  name: name ?? _name,
-  fullName: fullName ?? _fullName,
-  private: private ?? _private,
-  owner: owner ?? _owner,
-  htmlUrl: htmlUrl ?? _htmlUrl,
-  description: description ?? _description,
-  fork: fork ?? _fork,
-  url: url ?? _url,
-  forksUrl: forksUrl ?? _forksUrl,
-  keysUrl: keysUrl ?? _keysUrl,
-  collaboratorsUrl: collaboratorsUrl ?? _collaboratorsUrl,
-  teamsUrl: teamsUrl ?? _teamsUrl,
-  hooksUrl: hooksUrl ?? _hooksUrl,
-  issueEventsUrl: issueEventsUrl ?? _issueEventsUrl,
-  eventsUrl: eventsUrl ?? _eventsUrl,
-  assigneesUrl: assigneesUrl ?? _assigneesUrl,
-  branchesUrl: branchesUrl ?? _branchesUrl,
-  tagsUrl: tagsUrl ?? _tagsUrl,
-  blobsUrl: blobsUrl ?? _blobsUrl,
-  gitTagsUrl: gitTagsUrl ?? _gitTagsUrl,
-  gitRefsUrl: gitRefsUrl ?? _gitRefsUrl,
-  treesUrl: treesUrl ?? _treesUrl,
-  statusesUrl: statusesUrl ?? _statusesUrl,
-  languagesUrl: languagesUrl ?? _languagesUrl,
-  stargazersUrl: stargazersUrl ?? _stargazersUrl,
-  contributorsUrl: contributorsUrl ?? _contributorsUrl,
-  subscribersUrl: subscribersUrl ?? _subscribersUrl,
-  subscriptionUrl: subscriptionUrl ?? _subscriptionUrl,
-  commitsUrl: commitsUrl ?? _commitsUrl,
-  gitCommitsUrl: gitCommitsUrl ?? _gitCommitsUrl,
-  commentsUrl: commentsUrl ?? _commentsUrl,
-  issueCommentUrl: issueCommentUrl ?? _issueCommentUrl,
-  contentsUrl: contentsUrl ?? _contentsUrl,
-  compareUrl: compareUrl ?? _compareUrl,
-  mergesUrl: mergesUrl ?? _mergesUrl,
-  archiveUrl: archiveUrl ?? _archiveUrl,
-  downloadsUrl: downloadsUrl ?? _downloadsUrl,
-  issuesUrl: issuesUrl ?? _issuesUrl,
-  pullsUrl: pullsUrl ?? _pullsUrl,
-  milestonesUrl: milestonesUrl ?? _milestonesUrl,
-  notificationsUrl: notificationsUrl ?? _notificationsUrl,
-  labelsUrl: labelsUrl ?? _labelsUrl,
-  releasesUrl: releasesUrl ?? _releasesUrl,
-  deploymentsUrl: deploymentsUrl ?? _deploymentsUrl,
-  createdAt: createdAt ?? _createdAt,
-  updatedAt: updatedAt ?? _updatedAt,
-  pushedAt: pushedAt ?? _pushedAt,
-  gitUrl: gitUrl ?? _gitUrl,
-  sshUrl: sshUrl ?? _sshUrl,
-  cloneUrl: cloneUrl ?? _cloneUrl,
-  svnUrl: svnUrl ?? _svnUrl,
-  homepage: homepage ?? _homepage,
-  size: size ?? _size,
-  stargazersCount: stargazersCount ?? _stargazersCount,
-  watchersCount: watchersCount ?? _watchersCount,
-  language: language ?? _language,
-  hasIssues: hasIssues ?? _hasIssues,
-  hasProjects: hasProjects ?? _hasProjects,
-  hasDownloads: hasDownloads ?? _hasDownloads,
-  hasWiki: hasWiki ?? _hasWiki,
-  hasPages: hasPages ?? _hasPages,
-  forksCount: forksCount ?? _forksCount,
-  mirrorUrl: mirrorUrl ?? _mirrorUrl,
-  archived: archived ?? _archived,
-  disabled: disabled ?? _disabled,
-  openIssuesCount: openIssuesCount ?? _openIssuesCount,
-  license: license ?? _license,
-  allowForking: allowForking ?? _allowForking,
-  isTemplate: isTemplate ?? _isTemplate,
-  webCommitSignoffRequired: webCommitSignoffRequired ?? _webCommitSignoffRequired,
-  topics: topics ?? _topics,
-  visibility: visibility ?? _visibility,
-  forks: forks ?? _forks,
-  openIssues: openIssues ?? _openIssues,
-  watchers: watchers ?? _watchers,
-  defaultBranch: defaultBranch ?? _defaultBranch,
-);
+
+  Repos copyWith({
+    int? id,
+    String? nodeId,
+    String? name,
+    String? fullName,
+    bool? private,
+    Owner? owner,
+    String? htmlUrl,
+    String? description,
+    bool? fork,
+    String? url,
+    String? forksUrl,
+    String? keysUrl,
+    String? collaboratorsUrl,
+    String? teamsUrl,
+    String? hooksUrl,
+    String? issueEventsUrl,
+    String? eventsUrl,
+    String? assigneesUrl,
+    String? branchesUrl,
+    String? tagsUrl,
+    String? blobsUrl,
+    String? gitTagsUrl,
+    String? gitRefsUrl,
+    String? treesUrl,
+    String? statusesUrl,
+    String? languagesUrl,
+    String? stargazersUrl,
+    String? contributorsUrl,
+    String? subscribersUrl,
+    String? subscriptionUrl,
+    String? commitsUrl,
+    String? gitCommitsUrl,
+    String? commentsUrl,
+    String? issueCommentUrl,
+    String? contentsUrl,
+    String? compareUrl,
+    String? mergesUrl,
+    String? archiveUrl,
+    String? downloadsUrl,
+    String? issuesUrl,
+    String? pullsUrl,
+    String? milestonesUrl,
+    String? notificationsUrl,
+    String? labelsUrl,
+    String? releasesUrl,
+    String? deploymentsUrl,
+    String? createdAt,
+    String? updatedAt,
+    String? pushedAt,
+    String? gitUrl,
+    String? sshUrl,
+    String? cloneUrl,
+    String? svnUrl,
+    dynamic homepage,
+    int? size,
+    int? stargazersCount,
+    int? watchersCount,
+    String? language,
+    bool? hasIssues,
+    bool? hasProjects,
+    bool? hasDownloads,
+    bool? hasWiki,
+    bool? hasPages,
+    int? forksCount,
+    dynamic mirrorUrl,
+    bool? archived,
+    bool? disabled,
+    int? openIssuesCount,
+    dynamic license,
+    bool? allowForking,
+    bool? isTemplate,
+    bool? webCommitSignoffRequired,
+    List<dynamic>? topics,
+    String? visibility,
+    int? forks,
+    int? openIssues,
+    int? watchers,
+    String? defaultBranch,
+  }) =>
+      Repos(
+        id: id ?? _id,
+        nodeId: nodeId ?? _nodeId,
+        name: name ?? _name,
+        fullName: fullName ?? _fullName,
+        private: private ?? _private,
+        owner: owner ?? _owner,
+        htmlUrl: htmlUrl ?? _htmlUrl,
+        description: description ?? _description,
+        fork: fork ?? _fork,
+        url: url ?? _url,
+        forksUrl: forksUrl ?? _forksUrl,
+        keysUrl: keysUrl ?? _keysUrl,
+        collaboratorsUrl: collaboratorsUrl ?? _collaboratorsUrl,
+        teamsUrl: teamsUrl ?? _teamsUrl,
+        hooksUrl: hooksUrl ?? _hooksUrl,
+        issueEventsUrl: issueEventsUrl ?? _issueEventsUrl,
+        eventsUrl: eventsUrl ?? _eventsUrl,
+        assigneesUrl: assigneesUrl ?? _assigneesUrl,
+        branchesUrl: branchesUrl ?? _branchesUrl,
+        tagsUrl: tagsUrl ?? _tagsUrl,
+        blobsUrl: blobsUrl ?? _blobsUrl,
+        gitTagsUrl: gitTagsUrl ?? _gitTagsUrl,
+        gitRefsUrl: gitRefsUrl ?? _gitRefsUrl,
+        treesUrl: treesUrl ?? _treesUrl,
+        statusesUrl: statusesUrl ?? _statusesUrl,
+        languagesUrl: languagesUrl ?? _languagesUrl,
+        stargazersUrl: stargazersUrl ?? _stargazersUrl,
+        contributorsUrl: contributorsUrl ?? _contributorsUrl,
+        subscribersUrl: subscribersUrl ?? _subscribersUrl,
+        subscriptionUrl: subscriptionUrl ?? _subscriptionUrl,
+        commitsUrl: commitsUrl ?? _commitsUrl,
+        gitCommitsUrl: gitCommitsUrl ?? _gitCommitsUrl,
+        commentsUrl: commentsUrl ?? _commentsUrl,
+        issueCommentUrl: issueCommentUrl ?? _issueCommentUrl,
+        contentsUrl: contentsUrl ?? _contentsUrl,
+        compareUrl: compareUrl ?? _compareUrl,
+        mergesUrl: mergesUrl ?? _mergesUrl,
+        archiveUrl: archiveUrl ?? _archiveUrl,
+        downloadsUrl: downloadsUrl ?? _downloadsUrl,
+        issuesUrl: issuesUrl ?? _issuesUrl,
+        pullsUrl: pullsUrl ?? _pullsUrl,
+        milestonesUrl: milestonesUrl ?? _milestonesUrl,
+        notificationsUrl: notificationsUrl ?? _notificationsUrl,
+        labelsUrl: labelsUrl ?? _labelsUrl,
+        releasesUrl: releasesUrl ?? _releasesUrl,
+        deploymentsUrl: deploymentsUrl ?? _deploymentsUrl,
+        createdAt: createdAt ?? _createdAt,
+        updatedAt: updatedAt ?? _updatedAt,
+        pushedAt: pushedAt ?? _pushedAt,
+        gitUrl: gitUrl ?? _gitUrl,
+        sshUrl: sshUrl ?? _sshUrl,
+        cloneUrl: cloneUrl ?? _cloneUrl,
+        svnUrl: svnUrl ?? _svnUrl,
+        homepage: homepage ?? _homepage,
+        size: size ?? _size,
+        stargazersCount: stargazersCount ?? _stargazersCount,
+        watchersCount: watchersCount ?? _watchersCount,
+        language: language ?? _language,
+        hasIssues: hasIssues ?? _hasIssues,
+        hasProjects: hasProjects ?? _hasProjects,
+        hasDownloads: hasDownloads ?? _hasDownloads,
+        hasWiki: hasWiki ?? _hasWiki,
+        hasPages: hasPages ?? _hasPages,
+        forksCount: forksCount ?? _forksCount,
+        mirrorUrl: mirrorUrl ?? _mirrorUrl,
+        archived: archived ?? _archived,
+        disabled: disabled ?? _disabled,
+        openIssuesCount: openIssuesCount ?? _openIssuesCount,
+        license: license ?? _license,
+        allowForking: allowForking ?? _allowForking,
+        isTemplate: isTemplate ?? _isTemplate,
+        webCommitSignoffRequired:
+            webCommitSignoffRequired ?? _webCommitSignoffRequired,
+        topics: topics ?? _topics,
+        visibility: visibility ?? _visibility,
+        forks: forks ?? _forks,
+        openIssues: openIssues ?? _openIssues,
+        watchers: watchers ?? _watchers,
+        defaultBranch: defaultBranch ?? _defaultBranch,
+      );
+
   int? get id => _id;
+
   String? get nodeId => _nodeId;
+
   String? get name => _name;
+
   String? get fullName => _fullName;
+
   bool? get private => _private;
+
   Owner? get owner => _owner;
+
   String? get htmlUrl => _htmlUrl;
+
   String? get description => _description;
+
   bool? get fork => _fork;
+
   String? get url => _url;
+
   String? get forksUrl => _forksUrl;
+
   String? get keysUrl => _keysUrl;
+
   String? get collaboratorsUrl => _collaboratorsUrl;
+
   String? get teamsUrl => _teamsUrl;
+
   String? get hooksUrl => _hooksUrl;
+
   String? get issueEventsUrl => _issueEventsUrl;
+
   String? get eventsUrl => _eventsUrl;
+
   String? get assigneesUrl => _assigneesUrl;
+
   String? get branchesUrl => _branchesUrl;
+
   String? get tagsUrl => _tagsUrl;
+
   String? get blobsUrl => _blobsUrl;
+
   String? get gitTagsUrl => _gitTagsUrl;
+
   String? get gitRefsUrl => _gitRefsUrl;
+
   String? get treesUrl => _treesUrl;
+
   String? get statusesUrl => _statusesUrl;
+
   String? get languagesUrl => _languagesUrl;
+
   String? get stargazersUrl => _stargazersUrl;
+
   String? get contributorsUrl => _contributorsUrl;
+
   String? get subscribersUrl => _subscribersUrl;
+
   String? get subscriptionUrl => _subscriptionUrl;
+
   String? get commitsUrl => _commitsUrl;
+
   String? get gitCommitsUrl => _gitCommitsUrl;
+
   String? get commentsUrl => _commentsUrl;
+
   String? get issueCommentUrl => _issueCommentUrl;
+
   String? get contentsUrl => _contentsUrl;
+
   String? get compareUrl => _compareUrl;
+
   String? get mergesUrl => _mergesUrl;
+
   String? get archiveUrl => _archiveUrl;
+
   String? get downloadsUrl => _downloadsUrl;
+
   String? get issuesUrl => _issuesUrl;
+
   String? get pullsUrl => _pullsUrl;
+
   String? get milestonesUrl => _milestonesUrl;
+
   String? get notificationsUrl => _notificationsUrl;
+
   String? get labelsUrl => _labelsUrl;
+
   String? get releasesUrl => _releasesUrl;
+
   String? get deploymentsUrl => _deploymentsUrl;
+
   String? get createdAt => _createdAt;
+
   String? get updatedAt => _updatedAt;
+
   String? get pushedAt => _pushedAt;
+
   String? get gitUrl => _gitUrl;
+
   String? get sshUrl => _sshUrl;
+
   String? get cloneUrl => _cloneUrl;
+
   String? get svnUrl => _svnUrl;
+
   dynamic get homepage => _homepage;
+
   int? get size => _size;
+
   int? get stargazersCount => _stargazersCount;
+
   int? get watchersCount => _watchersCount;
+
   String? get language => _language;
+
   bool? get hasIssues => _hasIssues;
+
   bool? get hasProjects => _hasProjects;
+
   bool? get hasDownloads => _hasDownloads;
+
   bool? get hasWiki => _hasWiki;
+
   bool? get hasPages => _hasPages;
+
   int? get forksCount => _forksCount;
+
   dynamic get mirrorUrl => _mirrorUrl;
+
   bool? get archived => _archived;
+
   bool? get disabled => _disabled;
+
   int? get openIssuesCount => _openIssuesCount;
+
   dynamic get license => _license;
+
   bool? get allowForking => _allowForking;
+
   bool? get isTemplate => _isTemplate;
+
   bool? get webCommitSignoffRequired => _webCommitSignoffRequired;
+
   List<dynamic>? get topics => _topics;
+
   String? get visibility => _visibility;
+
   int? get forks => _forks;
+
   int? get openIssues => _openIssues;
+
   int? get watchers => _watchers;
+
   String? get defaultBranch => _defaultBranch;
 
   Map<String, dynamic> toJson() {
@@ -723,6 +813,116 @@ Repos copyWith({  int? id,
     return map;
   }
 
+  toListTile() {
+    if (this.name != this.owner!.login) {
+      return GestureDetector(
+        onTap: () {
+          launchUrl(Uri.parse(this.htmlUrl!));
+        },
+        child: Card(
+          elevation: 15,
+          clipBehavior: Clip.antiAlias,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  SizedBox(
+                    width: 100,
+                    child: Padding(
+                      padding: EdgeInsets.all(7),
+                      child: Image(
+                        image: AssetImage(_getImageName(this.topics!)),
+                        fit: BoxFit.fitHeight,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(ReCase(this.name!).titleCase,
+                            style: TextStyle(fontSize: 32)),
+                        Text(description!),
+                        Text(
+                          "Pushed At " +
+                              DateFormat.yMMMd('en_US')
+                                  .format(DateTime.parse(this.pushedAt!)),
+                          style:
+                              TextStyle(color: Colors.black.withOpacity(0.6)),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    } else {
+      return GestureDetector(
+        onTap: () {
+          launchUrl(Uri.parse(
+              "https://evan-kwon.notion.site/Heonjin-Kwon-6559a536839f4dd483ee86e18d91a214"));
+        },
+        child: Card(
+          elevation: 15,
+          clipBehavior: Clip.antiAlias,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(7),
+                    child:                   Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 50,),
+                          Text(
+                            "노력의 가치를 아는",
+                            style:
+                            TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          Text(ReCase(this.name!).titleCase,
+                              style: TextStyle(fontSize: 32)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                  height: 300,
+                  width: double.infinity,
+                  child: Image.network(
+                    owner!.avatarUrl!,
+                    fit: BoxFit.fitWidth,
+                  ))
+            ],
+          ),
+        ),
+      );
+    }
+  }
+
+  String _getImageName(List<dynamic> topics) {
+    if (topics.contains('study')) {
+      return 'assets/images/icon_books.png';
+    } else if (topics.contains('project')) {
+      return 'assets/images/icon_rocket.png';
+    } else if (topics.contains('contest')) {
+      return 'assets/images/icon_trophy.png';
+    } else {
+      return 'assets/images/icon_hello.png';
+    }
+  }
 }
 
 /// login : "kwon-evan"
@@ -746,24 +946,25 @@ Repos copyWith({  int? id,
 
 class Owner {
   Owner({
-      String? login, 
-      int? id, 
-      String? nodeId, 
-      String? avatarUrl, 
-      String? gravatarId, 
-      String? url, 
-      String? htmlUrl, 
-      String? followersUrl, 
-      String? followingUrl, 
-      String? gistsUrl, 
-      String? starredUrl, 
-      String? subscriptionsUrl, 
-      String? organizationsUrl, 
-      String? reposUrl, 
-      String? eventsUrl, 
-      String? receivedEventsUrl, 
-      String? type, 
-      bool? siteAdmin,}){
+    String? login,
+    int? id,
+    String? nodeId,
+    String? avatarUrl,
+    String? gravatarId,
+    String? url,
+    String? htmlUrl,
+    String? followersUrl,
+    String? followingUrl,
+    String? gistsUrl,
+    String? starredUrl,
+    String? subscriptionsUrl,
+    String? organizationsUrl,
+    String? reposUrl,
+    String? eventsUrl,
+    String? receivedEventsUrl,
+    String? type,
+    bool? siteAdmin,
+  }) {
     _login = login;
     _id = id;
     _nodeId = nodeId;
@@ -782,7 +983,7 @@ class Owner {
     _receivedEventsUrl = receivedEventsUrl;
     _type = type;
     _siteAdmin = siteAdmin;
-}
+  }
 
   Owner.fromJson(dynamic json) {
     _login = json['login'];
@@ -804,6 +1005,7 @@ class Owner {
     _type = json['type'];
     _siteAdmin = json['site_admin'];
   }
+
   String? _login;
   int? _id;
   String? _nodeId;
@@ -822,60 +1024,82 @@ class Owner {
   String? _receivedEventsUrl;
   String? _type;
   bool? _siteAdmin;
-Owner copyWith({  String? login,
-  int? id,
-  String? nodeId,
-  String? avatarUrl,
-  String? gravatarId,
-  String? url,
-  String? htmlUrl,
-  String? followersUrl,
-  String? followingUrl,
-  String? gistsUrl,
-  String? starredUrl,
-  String? subscriptionsUrl,
-  String? organizationsUrl,
-  String? reposUrl,
-  String? eventsUrl,
-  String? receivedEventsUrl,
-  String? type,
-  bool? siteAdmin,
-}) => Owner(  login: login ?? _login,
-  id: id ?? _id,
-  nodeId: nodeId ?? _nodeId,
-  avatarUrl: avatarUrl ?? _avatarUrl,
-  gravatarId: gravatarId ?? _gravatarId,
-  url: url ?? _url,
-  htmlUrl: htmlUrl ?? _htmlUrl,
-  followersUrl: followersUrl ?? _followersUrl,
-  followingUrl: followingUrl ?? _followingUrl,
-  gistsUrl: gistsUrl ?? _gistsUrl,
-  starredUrl: starredUrl ?? _starredUrl,
-  subscriptionsUrl: subscriptionsUrl ?? _subscriptionsUrl,
-  organizationsUrl: organizationsUrl ?? _organizationsUrl,
-  reposUrl: reposUrl ?? _reposUrl,
-  eventsUrl: eventsUrl ?? _eventsUrl,
-  receivedEventsUrl: receivedEventsUrl ?? _receivedEventsUrl,
-  type: type ?? _type,
-  siteAdmin: siteAdmin ?? _siteAdmin,
-);
+
+  Owner copyWith({
+    String? login,
+    int? id,
+    String? nodeId,
+    String? avatarUrl,
+    String? gravatarId,
+    String? url,
+    String? htmlUrl,
+    String? followersUrl,
+    String? followingUrl,
+    String? gistsUrl,
+    String? starredUrl,
+    String? subscriptionsUrl,
+    String? organizationsUrl,
+    String? reposUrl,
+    String? eventsUrl,
+    String? receivedEventsUrl,
+    String? type,
+    bool? siteAdmin,
+  }) =>
+      Owner(
+        login: login ?? _login,
+        id: id ?? _id,
+        nodeId: nodeId ?? _nodeId,
+        avatarUrl: avatarUrl ?? _avatarUrl,
+        gravatarId: gravatarId ?? _gravatarId,
+        url: url ?? _url,
+        htmlUrl: htmlUrl ?? _htmlUrl,
+        followersUrl: followersUrl ?? _followersUrl,
+        followingUrl: followingUrl ?? _followingUrl,
+        gistsUrl: gistsUrl ?? _gistsUrl,
+        starredUrl: starredUrl ?? _starredUrl,
+        subscriptionsUrl: subscriptionsUrl ?? _subscriptionsUrl,
+        organizationsUrl: organizationsUrl ?? _organizationsUrl,
+        reposUrl: reposUrl ?? _reposUrl,
+        eventsUrl: eventsUrl ?? _eventsUrl,
+        receivedEventsUrl: receivedEventsUrl ?? _receivedEventsUrl,
+        type: type ?? _type,
+        siteAdmin: siteAdmin ?? _siteAdmin,
+      );
+
   String? get login => _login;
+
   int? get id => _id;
+
   String? get nodeId => _nodeId;
+
   String? get avatarUrl => _avatarUrl;
+
   String? get gravatarId => _gravatarId;
+
   String? get url => _url;
+
   String? get htmlUrl => _htmlUrl;
+
   String? get followersUrl => _followersUrl;
+
   String? get followingUrl => _followingUrl;
+
   String? get gistsUrl => _gistsUrl;
+
   String? get starredUrl => _starredUrl;
+
   String? get subscriptionsUrl => _subscriptionsUrl;
+
   String? get organizationsUrl => _organizationsUrl;
+
   String? get reposUrl => _reposUrl;
+
   String? get eventsUrl => _eventsUrl;
+
   String? get receivedEventsUrl => _receivedEventsUrl;
+
   String? get type => _type;
+
   bool? get siteAdmin => _siteAdmin;
 
   Map<String, dynamic> toJson() {
@@ -900,5 +1124,4 @@ Owner copyWith({  String? login,
     map['site_admin'] = _siteAdmin;
     return map;
   }
-
 }

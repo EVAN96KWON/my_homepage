@@ -41,9 +41,7 @@ class _ReposListWidgetState extends State<ReposListWidget> {
           if (snapshot.hasData) {
             return ListView(
               padding: const EdgeInsets.all(16),
-              children: <Widget>[
-                ...snapshot.data!.map((e) => Tile.fromRepos(e)),
-              ],
+              children: reposToList(snapshot),
             );
           } else if (snapshot.hasError) {
             return Text('${snapshot.hasError}');
@@ -51,4 +49,23 @@ class _ReposListWidgetState extends State<ReposListWidget> {
           return const Center(child: CircularProgressIndicator());
         });
   }
+}
+
+reposToList(AsyncSnapshot<List<Repos>> snapshot) {
+  List<Repos> reposList = snapshot.data!;
+
+  reposList.sort((a, b) {
+    return DateTime.parse(a.pushedAt!).compareTo(DateTime.parse(b.pushedAt!));
+  });
+
+  reposList.forEach((repo) {
+    if (repo.name == repo.owner!.login) {
+      reposList.remove(repo);
+      reposList.add(repo);
+    }
+  });
+
+  return <Widget>[
+    ...reposList.reversed.map((e) => e.toListTile()),
+  ];
 }
