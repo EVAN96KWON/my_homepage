@@ -19,7 +19,7 @@ jobs:
       - run: flutter build web --release
         working-directory: ./
       - run: |
-          cd my_homepage/build/web
+          cd build/web
           git init
           git config --global user.email koun012@naver.com
           git config --global user.name heonjin
