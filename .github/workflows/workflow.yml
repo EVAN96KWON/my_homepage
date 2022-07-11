@@ -21,8 +21,8 @@ jobs:
       - run: |
           cd build/web
           git init
-          git config --global user.email koun012@naver.com
-          git config --global user.name heonjin
+          git config --global user.email "koun012@naver.com"
+          git config --global user.name "heonjin"
           git status
           git remote add origin https://$@github.com/kwon-evan/my_homepage.git
           git checkout -b gh-pages
