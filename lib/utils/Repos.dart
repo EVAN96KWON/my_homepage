@@ -1,4 +1,6 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:my_homepage/utils/info.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:recase/recase.dart';
 import 'package:intl/intl.dart';
@@ -814,98 +816,145 @@ class Repos {
   }
 
   toListTile() {
-    if (this.name != this.owner!.login) {
-      return GestureDetector(
-        onTap: () {
-          launchUrl(Uri.parse(this.htmlUrl!));
-        },
-        child: Card(
-          elevation: 15,
-          clipBehavior: Clip.antiAlias,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  SizedBox(
-                    width: 100,
-                    child: Padding(
-                      padding: EdgeInsets.all(7),
-                      child: Image(
-                        image: AssetImage(_getImageName(this.topics!)),
-                        fit: BoxFit.fitHeight,
+    if (name != owner!.login) {
+      return Container(
+        margin: const EdgeInsets.all(10),
+        child: GestureDetector(
+          onTap: () {
+            launchUrl(Uri.parse(htmlUrl!));
+          },
+          child: Card(
+            elevation: 15,
+            clipBehavior: Clip.antiAlias,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(ReCase(name!).titleCase,
+                        style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                        overflow: TextOverflow.fade,),
+                      Text(
+                        DateFormat.yMMMd('en_US')
+                            .format(DateTime.parse(pushedAt!)),
+                        style: TextStyle(
+                            color: Colors.black.withOpacity(0.6),
+                            overflow: TextOverflow.fade),
+                      )
+                    ],
+                  ),
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+                            Wrap(
+                              children: [
+                                if (language != null)
+                                  Container(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 7, 0),
+                                    child: ActionChip(
+                                      label: Text(language!),
+                                      onPressed: () {},
+                                    ),
+                                  )
+                                else
+                                  const SizedBox(),
+                                ...topics!.map(
+                                  (e) => Container(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 7, 7),
+                                    child: ActionChip(
+                                      label: Text(e),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Text(description!, overflow: TextOverflow.fade),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(ReCase(this.name!).titleCase,
-                            style: TextStyle(fontSize: 32)),
-                        Text(description!),
-                        Text(
-                          "Pushed At " +
-                              DateFormat.yMMMd('en_US')
-                                  .format(DateTime.parse(this.pushedAt!)),
-                          style:
-                              TextStyle(color: Colors.black.withOpacity(0.6)),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
+                    SizedBox(
+                      height: 100,
+                      child: Image(
+                        image: AssetImage(_getImageName(topics!)),
+                        fit: BoxFit.fitWidth,
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       );
     } else {
-      return GestureDetector(
-        onTap: () {
-          launchUrl(Uri.parse(
-              "https://evan-kwon.notion.site/Heonjin-Kwon-6559a536839f4dd483ee86e18d91a214"));
-        },
-        child: Card(
-          elevation: 15,
-          clipBehavior: Clip.antiAlias,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(7),
-                    child:                   Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: 50,),
-                          Text(
-                            "노력의 가치를 아는",
-                            style:
-                            TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          Text(ReCase(this.name!).titleCase,
-                              style: TextStyle(fontSize: 32)),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                  height: 300,
+      // personal card
+      return Container(
+        height: 400,
+        margin: const EdgeInsets.all(5),
+        child: GestureDetector(
+          onTap: () => launchUrl(Uri.parse(notion_url)),
+          child: Card(
+            elevation: 15,
+            clipBehavior: Clip.antiAlias,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Stack(
+              clipBehavior: Clip.antiAlias,
+              children: [
+                Container(
                   width: double.infinity,
+                  height: double.infinity,
                   child: Image.network(
                     owner!.avatarUrl!,
-                    fit: BoxFit.fitWidth,
-                  ))
-            ],
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 75,
+                  // color: Colors.black87,
+                  child: Padding(
+                      padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          TyperAnimatedText(
+                            'My Name Is',
+                            textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black87),
+                              speed: const Duration(milliseconds: 10)
+                          ),
+                          TyperAnimatedText(
+                            '권헌진',
+                            textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black87),
+                              speed: const Duration(milliseconds: 10)
+                          ),
+                          TyperAnimatedText(
+                            '\u{1F64C}Kwon Evan',
+                            textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black87),
+                              speed: const Duration(milliseconds: 10)
+                          ),
+                        ],
+                        totalRepeatCount: 1,
+                      )
+                    ,),
+                )
+              ],
+            ),
           ),
         ),
       );
@@ -943,6 +992,56 @@ class Repos {
 /// received_events_url : "https://api.github.com/users/kwon-evan/received_events"
 /// type : "User"
 /// site_admin : false
+///
+/// Container(
+//         margin: EdgeInsets.all(5),
+//         child: GestureDetector(
+//           onTap: () {
+//             launchUrl(Uri.parse(notion_url));
+//           },
+//           child: Card(
+//             elevation: 15,
+//             clipBehavior: Clip.antiAlias,
+//             shape: RoundedRectangleBorder(
+//               borderRadius: BorderRadius.circular(20),
+//             ),
+//             child: Column(
+//               children: [
+//                 Padding(
+//                   padding: const EdgeInsets.all(15.0),
+//                   child: Row(
+//                     children: [
+//                       Expanded(
+//                         child: Column(
+//                           crossAxisAlignment: CrossAxisAlignment.start,
+//                           children: [
+//                             const SizedBox(
+//                               height: 50,
+//                             ),
+//                             Text(
+//                               "권헌진",
+//                               style: TextStyle(
+//                                   color: Colors.black.withOpacity(0.6)),
+//                             ),
+//                             Text(ReCase(this.name!).titleCase,
+//                                 style: TextStyle(fontSize: 32)),
+//                           ],
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+//                 SizedBox(
+//                     width: double.infinity,
+//                     child: Image.network(
+//                       owner!.avatarUrl!,
+//                       fit: BoxFit.fill,
+//                     ))
+//               ],
+//             ),
+//           ),
+//         ),
+//       );
 
 class Owner {
   Owner({
