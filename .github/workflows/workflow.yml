@@ -17,7 +17,7 @@ jobs:
       - run: flutter config --enable-web
       - run: flutter pub get
       - run: flutter build web --release
-        working-directory: ./my_homepage
+        working-directory: ./
       - run: |
           cd my_homepage/build/web
           git init
