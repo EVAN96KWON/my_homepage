@@ -829,67 +829,55 @@ class Repos {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        ReCase(name!).titleCase,
-                        style: const TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
-                        overflow: TextOverflow.fade,
-                      ),
-                      Text(
-                        DateFormat.yMMMd('en_US')
-                            .format(DateTime.parse(pushedAt!)),
-                        style: TextStyle(
-                            color: Colors.black.withOpacity(0.6),
-                            overflow: TextOverflow.fade),
-                      )
-                    ],
-                  ),
-                ),
-                Row(
-                  children: [
+            child: Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Row(children: [
                     Expanded(
-                      child: Container(
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 4)),
-                            Wrap(
-                              children: [
-                                if (language != null)
-                                  Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 7, 7),
-                                    child: ActionChip(
-                                      label: Text(language!),
-                                      onPressed: () {},
-                                    ),
-                                  )
-                                else
-                                  const SizedBox(),
-                                ...topics!.map(
-                                  (e) => Container(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 0, 7, 7),
-                                    child: ActionChip(
-                                      label: Text(e),
-                                      onPressed: () {},
-                                    ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            ReCase(name!).titleCase,
+                            style: const TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                overflow: TextOverflow.clip),
+                            overflow: TextOverflow.fade,
+                          ),
+                          Text(
+                            DateFormat.yMMMd('en_US')
+                                .format(DateTime.parse(pushedAt!)),
+                            style: TextStyle(
+                                color: Colors.black.withOpacity(0.6),
+                                overflow: TextOverflow.fade),
+                          ),
+                          Wrap(
+                            children: [
+                              if (language != null)
+                                Container(
+                                  padding: const EdgeInsets.all(5),
+                                  child: ActionChip(
+                                    label: Text(language!),
+                                    onPressed: () {},
                                   ),
                                 )
-                              ],
-                            ),
-                          ],
-                        ),
+                              else
+                                const SizedBox(),
+                              ...topics!.map(
+                                (e) => Container(
+                                  padding: const EdgeInsets.all(5),
+                                  child: ActionChip(
+                                    label: Text(e),
+                                    onPressed: () {},
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
@@ -899,12 +887,22 @@ class Repos {
                         fit: BoxFit.fitWidth,
                       ),
                     )
-                  ],
-                ),
-                Container(
-                    margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
-                    child: Text(description!, overflow: TextOverflow.clip))
-              ],
+                  ]),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Divider(
+                      height: 1,
+                      thickness: 1,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 3),
+                    child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(description!, overflow: TextOverflow.clip)),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
