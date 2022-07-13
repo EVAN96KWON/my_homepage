@@ -832,14 +832,17 @@ class Repos {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
+                Container(
+                  padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(ReCase(name!).titleCase,
-                        style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                        overflow: TextOverflow.fade,),
+                      Text(
+                        ReCase(name!).titleCase,
+                        style: const TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                        overflow: TextOverflow.fade,
+                      ),
                       Text(
                         DateFormat.yMMMd('en_US')
                             .format(DateTime.parse(pushedAt!)),
@@ -858,12 +861,14 @@ class Repos {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(padding: EdgeInsets.symmetric(vertical: 4)),
+                            const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 4)),
                             Wrap(
                               children: [
                                 if (language != null)
                                   Container(
-                                    padding: const EdgeInsets.fromLTRB(0, 0, 7, 0),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 7, 7),
                                     child: ActionChip(
                                       label: Text(language!),
                                       onPressed: () {},
@@ -873,7 +878,8 @@ class Repos {
                                   const SizedBox(),
                                 ...topics!.map(
                                   (e) => Container(
-                                    padding: const EdgeInsets.fromLTRB(0, 0, 7, 7),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 7, 7),
                                     child: ActionChip(
                                       label: Text(e),
                                       onPressed: () {},
@@ -882,7 +888,6 @@ class Repos {
                                 )
                               ],
                             ),
-                            Text(description!, overflow: TextOverflow.fade),
                           ],
                         ),
                       ),
@@ -896,6 +901,9 @@ class Repos {
                     )
                   ],
                 ),
+                Container(
+                    margin: EdgeInsets.fromLTRB(15, 0, 15, 15),
+                    child: Text(description!, overflow: TextOverflow.clip))
               ],
             ),
           ),
@@ -930,28 +938,31 @@ class Repos {
                   height: 75,
                   // color: Colors.black87,
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          TyperAnimatedText(
-                            'My Name Is',
-                            textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black87),
-                              speed: const Duration(milliseconds: 10)
-                          ),
-                          TyperAnimatedText(
-                            '권헌진',
-                            textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black87),
-                              speed: const Duration(milliseconds: 10)
-                          ),
-                          TyperAnimatedText(
-                            '\u{1F64C}Kwon Evan',
-                            textStyle: const TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black87),
-                              speed: const Duration(milliseconds: 10)
-                          ),
-                        ],
-                        totalRepeatCount: 1,
-                      )
-                    ,),
+                    padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        TyperAnimatedText('My Name Is',
+                            textStyle: const TextStyle(
+                                fontSize: 32.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87),
+                            speed: const Duration(milliseconds: 10)),
+                        TyperAnimatedText('권헌진',
+                            textStyle: const TextStyle(
+                                fontSize: 32.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87),
+                            speed: const Duration(milliseconds: 10)),
+                        TyperAnimatedText('\u{1F64C}Kwon Evan',
+                            textStyle: const TextStyle(
+                                fontSize: 32.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87),
+                            speed: const Duration(milliseconds: 10)),
+                      ],
+                      totalRepeatCount: 1,
+                    ),
+                  ),
                 )
               ],
             ),

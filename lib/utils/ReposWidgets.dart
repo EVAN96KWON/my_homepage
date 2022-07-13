@@ -40,8 +40,7 @@ class _ReposListWidgetState extends State<ReposListWidget> {
         future: futureRepos,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return ListView(
-              padding: const EdgeInsets.all(7),
+            return Column(
               children: reposToList(snapshot),
             );
           } else if (snapshot.hasError) {
@@ -74,12 +73,10 @@ class _ReposGridWidgetState extends State<ReposGridWidget> {
         future: futureRepos,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return SingleChildScrollView(
-              child: StaggeredGrid.count(
-                crossAxisCount:
-                    (MediaQuery.of(context).size.width / 150).round(),
-                children: reposToGrid(snapshot),
-              ),
+            return StaggeredGrid.count(
+              crossAxisCount:
+                  (MediaQuery.of(context).size.width / 150).round(),
+              children: reposToGrid(snapshot),
             );
           } else if (snapshot.hasError) {
             return Text('${snapshot.hasError}');
