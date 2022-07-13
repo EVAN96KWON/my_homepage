@@ -46,7 +46,14 @@ class _ReposListWidgetState extends State<ReposListWidget> {
           } else if (snapshot.hasError) {
             return Text('${snapshot.hasError}');
           }
-          return const Center(child: CircularProgressIndicator());
+          return SizedBox(
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height - 56,
+            child: const Align(
+              alignment: Alignment.center,
+              child: CircularProgressIndicator(),
+            ),
+          );
         });
   }
 }
@@ -81,7 +88,14 @@ class _ReposGridWidgetState extends State<ReposGridWidget> {
           } else if (snapshot.hasError) {
             return Text('${snapshot.hasError}');
           }
-          return const Center(child: CircularProgressIndicator());
+          return SizedBox(
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height - 56,
+            child: const Align(
+              alignment: Alignment.center,
+              child: CircularProgressIndicator(),
+            ),
+          );
         });
   }
 }
